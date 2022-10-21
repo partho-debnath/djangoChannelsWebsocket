@@ -1,4 +1,3 @@
-from multiprocessing import context
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views import View
@@ -18,3 +17,4 @@ class ChatView(View):
             'group_name': group_name
         }
         return render(request, self.template_name, context)
+    

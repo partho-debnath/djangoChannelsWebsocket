@@ -76,7 +76,7 @@ TEMPLATES = [
 # WSGI_APPLICATION = 'djangoChannelsWebsocket.wsgi.application'
 ASGI_APPLICATION = 'djangoChannelsWebsocket.asgi.application'
 # for chat application
-CHANNEL_LAYERS = {      
+CHANNEL_LAYERS = {   
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
@@ -131,7 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [ 
+# serving static files
+STATICFILES_DIRS = [  
     Path.joinpath(BASE_DIR, 'statics')
 ]
 
